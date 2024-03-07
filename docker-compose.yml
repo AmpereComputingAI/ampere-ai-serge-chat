@@ -1,0 +1,15 @@
+services:
+  serge:
+    image: ghcr.io/amperecomputingai/ampere-ai-ref-apps:serge-0.0.1
+    container_name: serge-app
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - 8008:8008
+    volumes:
+      - weights:/usr/src/app/weights
+      - datadb:/data/db/
+
+volumes:
+  weights:
+  datadb:
