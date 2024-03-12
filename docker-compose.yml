@@ -1,6 +1,6 @@
 services:
   serge:
-    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.1
+    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.2
     container_name: serge-app
     privileged: true
     restart: unless-stopped
