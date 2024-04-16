@@ -1,8 +1,16 @@
-# This file needs to be used along with serge/docker-compose.yaml
-
 services:
   serge:
     image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.6
     container_name: serge-app
     build:
-      context: .
+      context: ./serge
+    restart: unless-stopped
+    ports:
+      - 8008:8008
+    volumes:
+      - weights:/usr/src/app/weights
+      - datadb:/data/db/
+
+volumes:
+  weights:
+  datadb:
