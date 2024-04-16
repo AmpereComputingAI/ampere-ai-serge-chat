@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker compose -f docker-compose.yml up -d
+docker compose -f serge/docker-compose.yml -f compose.yml up -d

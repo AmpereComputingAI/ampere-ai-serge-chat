@@ -1,0 +1,19 @@
+diff --git a/web/src/routes/chat/[id]/+page.svelte b/web/src/routes/chat/[id]/+page.svelte
+index e9d445f..3ac2d42 100644
+--- a/web/src/routes/chat/[id]/+page.svelte
++++ b/web/src/routes/chat/[id]/+page.svelte
+@@ -284,6 +284,14 @@
+       <div class="h-full relative flex items-center justify-center">
+         <div
+           class="flex flex-row items-center justify-center color-base-300"
++          title="Platform"
++        >
++          <span class="ml-2 inline-block text-center text-sm font-semibold">
++            {"Ampere CPUs"}
++          </span>
++        </div>
++        <div
++          class="pl-4 hidden sm:flex flex-row items-center justify-center color-base-300"
+           title="Model"
+         >
+           <svg

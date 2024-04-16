@@ -1,0 +1,62 @@
+diff --git a/web/src/routes/+page.svelte b/web/src/routes/+page.svelte
+index ca16c63..190270b 100644
+--- a/web/src/routes/+page.svelte
++++ b/web/src/routes/+page.svelte
+@@ -12,14 +12,14 @@
+   let top_k = 50;
+   let top_p = 0.95;
+ 
+-  let max_length = 2048;
++  let max_length = 1024;
+   let repeat_last_n = 64;
+   let repeat_penalty = 1.3;
+ 
+   let init_prompt =
+     "Below is an instruction that describes a task. Write a response that appropriately completes the request.";
+ 
+-  let n_threads = 4;
++  let n_threads = 64;
+   let context_window = 2048;
+   let gpu_layers = 0;
+ 
+@@ -46,9 +46,13 @@
+   }
+ </script>
+ 
+-<div class="flex flex-col items-center justify-center pt-5">
+-  <h1 class="pb-2 text-3xl font-bold">Say Hi to Serge</h1>
++<div class="mx-auto w-fit pt-5 flex flex-col lg:flex-row justify-center">
++  <img src="ampere_logo.png" alt="Ampere logo" width=200>
++  <h1 class="pb-2 text-4xl font-bold">Chat App&nbsp;</h1>
++  <h1 class="pb-2 text-xl font-bold">| Powered by Llama.cpp+Serge</h1>
++  <img src="ampere_logo.png" alt="Ampere logo" width=200>
+ </div>
++
+ <h1 class="pb-5 pt-2 text-center text-xl font-light">
+   An easy way to chat with LLaMA based models.
+ </h1>
+@@ -161,24 +165,6 @@
+           class="range range-sm mt-auto"
+         />
+       </div>
+-      <div
+-        class="tooltip col-span-2"
+-        data-tip="Number of layers to put on the GPU. The rest will be on the CPU."
+-      >
+-        <label for="gpu_layers" class="label-text"
+-          >GPU Layers - [{gpu_layers}]</label
+-        >
+-        <input
+-          id="gpu_layers"
+-          name="gpu_layers"
+-          type="range"
+-          bind:value={gpu_layers}
+-          min="0"
+-          max="100"
+-          step="1"
+-          class="range range-sm mt-auto"
+-        />
+-      </div>
+       <div
+         class="tooltip flex flex-col"
+         data-tip="Defines the penalty associated with repeating the last 'n' tokens in a generated text sequence."

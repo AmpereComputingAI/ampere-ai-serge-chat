@@ -1,0 +1,9 @@
+diff --git a/vendor/requirements.txt b/vendor/requirements.txt
+index 5015e31..b3dcc16 100644
+--- a/vendor/requirements.txt
++++ b/vendor/requirements.txt
+@@ -1,3 +1,4 @@
+ typing-extensions>=4.5.0
+ numpy>=1.20.0
+ diskcache>=5.6.1
++jinja2>=2.11.3
