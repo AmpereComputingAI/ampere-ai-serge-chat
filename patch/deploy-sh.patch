@@ -1,5 +1,5 @@
 diff --git a/scripts/deploy.sh b/scripts/deploy.sh
-index 060d617..9003259 100755
+index 109a90f..baa2ee7 100755
 --- a/scripts/deploy.sh
 +++ b/scripts/deploy.sh
 @@ -22,7 +22,7 @@ detect_cpu_features() {
@@ -7,7 +7,7 @@ index 060d617..9003259 100755
  # Check if the CPU architecture is aarch64/arm64
  if [ "$cpu_arch" = "aarch64" ]; then
 -	pip_command="python -m pip install -v llama-cpp-python==$LLAMA_PYTHON_VERSION --only-binary=:all: --extra-index-url=https://gaby.github.io/arm64-wheels/"
-+	pip_command="python -m pip install -v https://ampereaidevelopus.s3.amazonaws.com/releases/llama.aio/1.1.2/llama_cpp_python-0.2.33-cp311-cp311-manylinux_2_36_aarch64.whl"
++	pip_command="python -m pip install -v https://ampereaidevelopus.s3.amazonaws.com/releases/llama.aio/1.2.0/llama_cpp_python-0.2.63-cp311-cp311-linux_aarch64.whl"
  else
  	# Use @smartappli provided wheels
  	cpu_feature=$(detect_cpu_features)
