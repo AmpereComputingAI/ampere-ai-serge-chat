@@ -5,7 +5,8 @@
 $ git clone https://github.com/AmpereComputingAI/ampere-ai-serge-chat.git
 $ cd ampere-ai-serge-chat
 ```
-
+### Note
+For better experience, we recommend running on 32 cores or more. 
 
 ## Install docker
 Follow the instructions from this link,
