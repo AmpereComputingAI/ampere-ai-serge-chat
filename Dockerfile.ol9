@@ -45,7 +45,8 @@ RUN dnf update -y \
     && mkdir -p /data/db \
     && mkdir -p /usr/src/app/weights \
     && echo "appendonly yes" >> /etc/redis/redis.conf \
-    && echo "dir /data/db/" >> /etc/redis/redis.conf
+    && echo "dir /data/db/" >> /etc/redis/redis.conf \
+    && dnf clean all && rm -rf /var/cache/dnf
 
 #    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
 
