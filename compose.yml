@@ -1,7 +1,6 @@
 services:
   serge:
-    #image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.8
-    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.8-ol9
+    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.9-ol9
     container_name: serge-app
     build:
       context: ./serge

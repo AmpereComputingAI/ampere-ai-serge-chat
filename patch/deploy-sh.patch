@@ -1,14 +1,13 @@
 diff --git a/scripts/deploy.sh b/scripts/deploy.sh
-index 7dc8293..94c6ff6 100755
+index 7dc8293..d771588 100755
 --- a/scripts/deploy.sh
 +++ b/scripts/deploy.sh
-@@ -22,7 +22,8 @@ detect_cpu_features() {
+@@ -22,7 +22,7 @@ detect_cpu_features() {
  
  # Check if the CPU architecture is aarch64/arm64
  if [ "$cpu_arch" = "aarch64" ] || [ "$cpu_arch" = "arm64" ]; then
 -	pip_command="python -m pip install -v llama-cpp-python==$LLAMA_PYTHON_VERSION --only-binary=:all: --extra-index-url=https://abetlen.github.io/llama-cpp-python/whl/cpu/"
-+	#pip_command="python -m pip install -v https://ampereaidevelopus.s3.amazonaws.com/releases/llama.aio/1.2.3/llama_cpp_python-0.2.75-cp311-cp311-linux_aarch64.whl"
-+	pip_command="python3.11 -m pip install -v https://github.com/AmpereComputingAI/llama.cpp/releases/download/v1.2.3/llama_cpp_python-0.2.75+ol9-cp311-cp311-linux_aarch64.whl"
++	pip_command="python3.11 -m pip install -v https://github.com/AmpereComputingAI/llama.cpp/releases/download/v1.2.6/llama_cpp_python-0.2.78-cp311-cp311-linux_aarch64.whl"
  else
  	# Use @smartappli provided wheels
  	#cpu_feature=$(detect_cpu_features)

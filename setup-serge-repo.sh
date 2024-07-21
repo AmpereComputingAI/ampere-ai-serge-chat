@@ -4,7 +4,7 @@
 root_dir=`pwd`
 repo_dir='serge'
 url="https://github.com/serge-chat/$repo_dir.git"
-tag_name="1c6a077" # uses llama-cpp-python == 0.2.75
+tag_name="0dc3097" # uses llama-cpp-python == 0.2.78
 
 rm -rf $repo_dir
 git clone $url
