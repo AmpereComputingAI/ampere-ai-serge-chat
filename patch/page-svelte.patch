@@ -1,5 +1,5 @@
 diff --git a/web/src/routes/+page.svelte b/web/src/routes/+page.svelte
-index ca16c63..190270b 100644
+index ca16c63..f0f4d7b 100644
 --- a/web/src/routes/+page.svelte
 +++ b/web/src/routes/+page.svelte
 @@ -12,14 +12,14 @@
@@ -26,7 +26,7 @@ index ca16c63..190270b 100644
 -<div class="flex flex-col items-center justify-center pt-5">
 -  <h1 class="pb-2 text-3xl font-bold">Say Hi to Serge</h1>
 +<div class="mx-auto w-fit pt-5 flex flex-col lg:flex-row justify-center">
-+  <img src="ampere_logo.png" alt="Ampere logo" width=200>
++  <img src="oracle_logo.png" alt="Oracle logo" width=200>
 +  <h1 class="pb-2 text-4xl font-bold">Chat App&nbsp;</h1>
 +  <h1 class="pb-2 text-xl font-bold">| Powered by Llama.cpp+Serge</h1>
 +  <img src="ampere_logo.png" alt="Ampere logo" width=200>
