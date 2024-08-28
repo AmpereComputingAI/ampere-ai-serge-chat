@@ -1,14 +1,13 @@
 services:
   serge:
-    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.9-ol9
+    image: ghcr.io/amperecomputingai/ampere-ai-serge-chat:0.0.10-ol9
     container_name: serge-app
     build:
       context: ./serge
       dockerfile: ../Dockerfile.ol9
       target: release
     restart: unless-stopped
-    ports:
-      - 8008:8008
+    network_mode: host
     volumes:
       - weights:/usr/src/app/weights
       - datadb:/data/db/
